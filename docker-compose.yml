@@ -11,7 +11,7 @@ services:
       - "15432:5432"
 
   bookmark-api:
-    image: qkrtjdtlr102/springbootnextjs:0.1
+    image: qkrtjdtlr102/springbootnextjs:0.2
     container_name: bookmark-api
     ports:
       - "18080:8080"
