@@ -23,7 +23,7 @@ public class BookmarkService {
     @Transactional(readOnly = true)
     public BookmarksDTO<?> getBookmarks(Integer page) {
         int pageNo = page < 1 ? 0 :page -1;
-        Pageable pageable = PageRequest.of(pageNo, 10, Sort.Direction.DESC, "createdAt");
+        Pageable pageable = PageRequest.of(pageNo, 5, Sort.Direction.DESC, "createdAt");
         //Page<Bookmark> bookmarkPage = repository.findAll(pageable);
 //        Page<BookmarkDTO> bookmarkPage = repository.findAll(pageable)
 //                .map(bookmark -> mapper.toDTO(bookmark));
@@ -35,7 +35,7 @@ public class BookmarkService {
     @Transactional(readOnly = true)
     public BookmarksDTO<?> searchBookmarks(String query, Integer page) {
         int pageNo = page < 1 ? 0 : page -1 ;
-        Pageable pageable = PageRequest.of(pageNo, 10, Sort.Direction.DESC, "id");
+        Pageable pageable = PageRequest.of(pageNo, 5, Sort.Direction.DESC, "id");
 //        Page<BookmarkDTO> bookmarkPage = repository.searchBookmarks(query, pageable);
 
 //        Page<BookmarkDTO> bookmarkPage = repository.findByTitleContainsIgnoreCase(query, pageable);
