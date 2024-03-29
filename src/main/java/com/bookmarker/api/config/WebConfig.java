@@ -22,6 +22,7 @@ public class WebConfig implements WebMvcConfigurer {
                 .maxAge(3600);
     }
 
+
     @Bean
     public FilterRegistrationBean<CorsFilter> corsFilterRegistrationBean() {
         CorsConfiguration config = new CorsConfiguration();
